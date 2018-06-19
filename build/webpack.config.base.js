@@ -3,7 +3,6 @@ const createVueLoaderOptions = require('./vue-loader.config')
 
 
 const isDev = process.env.NODE_ENV === 'development'
-console.log(createVueLoaderOptions(isDev))
 const config = {
     target: "web",
     entry: path.join(__dirname, '../client/index.js'),
