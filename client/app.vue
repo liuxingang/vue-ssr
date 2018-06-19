@@ -14,16 +14,16 @@
 
     console.log(Header.__docs)
     export default{
-        data(){
-            return {
-                text: 'abcde2'
-            }
-        },
-        components: {
-            Header,
-            Footer,
-            Todo
+      data () {
+        return {
+          text: 'abcde2'
         }
+      },
+      components: {
+        Header,
+        Footer,
+        Todo
+      }
     }
 </script>
 

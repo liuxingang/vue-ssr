@@ -14,34 +14,34 @@
 
 <script type="text/ecmascript-6">
     export default{
-        props: {
-            filter: {
-                type: String,
-                required: true
-            },
-            todos: {
-                type: Array,
-                required: true
-            }
+      props: {
+        filter: {
+          type: String,
+          required: true
         },
-        computed: {
-            unFinishedTodoLength(){
-                return this.todos.filter(todo => !todo.completed).length
-            }
-        },
-        data() {
-            return {
-                states: ["all", "active", "completed"]
-            }
-        },
-        methods: {
-            clearAllCompleted() {
-                this.$emit('clearAllCompleted')
-            },
-            toggleFilter(state){
-                this.$emit('toggle', state)
-            }
+        todos: {
+          type: Array,
+          required: true
         }
+      },
+      computed: {
+        unFinishedTodoLength () {
+          return this.todos.filter(todo => !todo.completed).length
+        }
+      },
+      data () {
+        return {
+          states: ['all', 'active', 'completed']
+        }
+      },
+      methods: {
+        clearAllCompleted () {
+          this.$emit('clearAllCompleted')
+        },
+        toggleFilter (state) {
+          this.$emit('toggle', state)
+        }
+      }
     }
 </script>
 

@@ -8,18 +8,18 @@
 
 <script type="text/ecmascript-6">
     export default{
-        props: {
-            todo: {
-                type: Object,
-                required: true
-            }
-        },
-        methods: {
-            deleteTodo() {
-                console.log(0)
-                this.$emit('del', this.todo.id)
-            }
+      props: {
+        todo: {
+          type: Object,
+          required: true
         }
+      },
+      methods: {
+        deleteTodo () {
+          console.log(0)
+          this.$emit('del', this.todo.id)
+        }
+      }
     }
 </script>
 
