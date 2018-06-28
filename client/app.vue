@@ -2,6 +2,7 @@
     <div id="app">
         <div id="cover"></div>
         <Header></Header>
+      <p>{{count}}</p>
       <router-link to="/app">app</router-link>
       <router-link to="/login">login</router-link>
       <transition name="fade">
@@ -21,6 +22,18 @@
       data () {
         return {
           text: 'abcde2'
+        }
+      },
+      mounted () {
+        console.log(this.$store)
+        let i = 1
+        setInterval(() => {
+          this.$store.commit('updateCount', i++)
+        }, 1000)
+      },
+      computed: {
+        count () {
+          return this.$store.state.count
         }
       },
       components: {
